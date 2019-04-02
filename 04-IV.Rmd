@@ -1,0 +1,9 @@
+# IV
+
+resource:
+
+1. worksheet from Dr.Hsiu-Fen Hsu
+
+2. [econometric_analysis from NTPUEcon graduate school by Dr.Mau-Ting  Lin](https://bookdown.org/tpemartin/econometric_analysis/)
+
+3. [PoE with R ch10](https://bookdown.org/ccolonescu/RPoE4/random-regressors.html)
