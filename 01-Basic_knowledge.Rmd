@@ -2,6 +2,8 @@
 
 ## How to write a empirical paper
 
+As a mindset, a good empirical paper rely on topics, method and writing skills.
+
 Basically, there are seven parts in an empirical paper. Let's see the ordered list below:
 
 1. Abstract
@@ -33,7 +35,12 @@ there are a few things that should appear in the introduction.
 
 2. We may spend the effort on specify the intuition and factors(or variables) that need to be controled in the model. It will bring me extra benefit on the models section explanation because the reader may already know the variables you use.
 
+3. Do the functional form decisions, or the robustness check.
+
+> some variables should appear in log form or in levels or square? (For example, pre-processing or capturing a diminishing effect)
+
 ### Econometric Models and Estimation Methods
+
 
 1. Describe the general approach you used to answering the question.
 
@@ -41,7 +48,7 @@ there are a few things that should appear in the introduction.
 
 3. Specifying the model clearly, and then discuss the estimation methods.
 
-> It sounds like the relationship between causality equation and real model equation.
+> It sounds like the relationship between causality equation and real model equation. It's not talking about the estimation result table.
 
 > Any assumption in the estimation method should be justified. For example, there are three assumption in IV, including the weak IV test. Don't tell the audience you want to do with IV, and jump to the causality interpretation in a blink! You even yet explain it is suitable or not.....
 
@@ -50,4 +57,62 @@ there are a few things that should appear in the introduction.
 ### The Data 
 
 > Honestly, I am not sure if the Data section should be mentioned before entering the model or not?
+
+- Describe the data carefully so that the other researchers may reproduce your research.
+
+    - Data accessible?
+    
+    - all applicable public data sources should be included in the appendix
+    
+    - a copy of questionnaire of your survey should be presented in the appendix
+    
+    - a table of summary statitics, such as maximum, minimum, mean, sd, distribution of each variable.
+    
+    - the unit(單位) of the variable.
+    
+    - Are they cross-sectional, time series, pooled cross sections, or panel data?
+    
+    - the quantity of your observations.
+    
+### Results(& Robustness check)
+
+> the results should include your estimates of any models formulated in the model section?
+
+- the most important thing is to discuss the interpretation and strength of your empirical result.
+
+    - Does the coefficients get the expected sign? (or it may be a method or data problem.)
+    
+    - Is the coeffiecients significant in statistics?
+    
+    - Describe the magnitude of the coefficients on your major key explantory variable.
+    
+    
+### Conclusions
+
+- Be careful on your conclusion writing because it's also section your audience may start.
+
+- You may summarize what you learn, also, discuss caveats(注意事項，告誡) to the conclusion drawn.
+
+- You may also mention the suggestion of future research.
+
+
+### One more thing 
+
+To pose a question, you need to locate your area first.
+
+There are several source for you to locate specific paper once your had decided your research area(研究主題)
+
+- EconLit
+
+- The Social Sciences Citation Index(SSCI)
+
+- Google scholar(set the ranking and the publication year as your clue)
+
+
+#### On the dataset
+
+1. Always do the data exploring(be specific, inspecting, cleaning, and summarizing) at first, and decide how to handle the missing value.
+
+> Usually, we set any numerical codes(or character) for missing value.
+    
 
