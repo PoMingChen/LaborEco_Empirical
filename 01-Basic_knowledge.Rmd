@@ -16,7 +16,7 @@ Basically, there are seven parts in an empirical paper. Let's see the ordered li
 
 ### Abstract
 
-The capstone of your paper! Take care of it like your first and only baby because it really dominates if the reader will go into the rest content.
+The capstone of your paper! Take care of it like your first and only baby because it really dominates if the reader will go into the rest of content.
 
 ### Introduction
 
@@ -24,20 +24,16 @@ there are a few things that should appear in the introduction.
 
 - States the basic objective and justify why that is important.
 
-- Entails a literature review in usual, which indicates what has been done and how previous can be upon. But, be humble and polite in order not to hurt someone else.
+- Entails a literature review in usual, which indicates what has been done and how previous work can be improved upon. But, be humble and polite in order not to hurt someone else.
 
 - Most Researcher will summarize what is discovered in this paper. This can be a useful way to grab the audience's attention.
 
 
 ### Conceptual or Theoretical Framework
 
-1. Often, there is no need to write down an economic model or empirical model unless you build a new one.
+1. Often, there is no need to write down an economic theory unless you build a new one.
 
-2. We may spend the effort on specify the intuition and factors(or variables) that need to be controled in the model. It will bring me extra benefit on the models section explanation because the reader may already know the variables you use.
-
-3. Do the functional form decisions, or the robustness check.
-
-> some variables should appear in log form or in levels or square? (For example, pre-processing or capturing a diminishing effect)
+2. We may spend the effort on specify the intuition and factors(or variables) that need to be controled in the model. It will bring you extra benefit on the model section because the reader may already know the variables you use.
 
 ### Econometric Models and Estimation Methods
 
@@ -53,6 +49,10 @@ there are a few things that should appear in the introduction.
 > Any assumption in the estimation method should be justified. For example, there are three assumption in IV, including the weak IV test. Don't tell the audience you want to do with IV, and jump to the causality interpretation in a blink! You even yet explain it is suitable or not.....
 
 4. Show the model(equation) in LaTeX, including the key explanatory variable(解釋變數) and controlled variable(控制變數)
+
+5. Do the functional form decisions, or the robustness check.
+
+> some variables should appear in log form or in levels or square? (For example, pre-processing or capturing a diminishing effect)
 
 ### The Data 
 
@@ -76,11 +76,11 @@ there are a few things that should appear in the introduction.
     
 ### Results(& Robustness check)
 
-> the results should include your estimates of any models formulated in the model section?
+> the results should include your estimates of __any__ models formulated in the model section? So, it may be more than 1 model in whole paper?
 
 - the most important thing is to discuss the interpretation and strength of your empirical result.
 
-    - Does the coefficients get the expected sign? (or it may be a method or data problem.)
+    - Does the coefficients get the expected sign? (or it may be a method or data problem)
     
     - Is the coeffiecients significant in statistics?
     
@@ -89,7 +89,7 @@ there are a few things that should appear in the introduction.
     
 ### Conclusions
 
-- Be careful on your conclusion writing because it's also section your audience may start.
+- Be careful on your conclusion writing because it's also the section your audience may start with.
 
 - You may summarize what you learn, also, discuss caveats(注意事項，告誡) to the conclusion drawn.
 
@@ -102,16 +102,18 @@ To pose a question, you need to locate your area first.
 
 There are several source for you to locate specific paper once your had decided your research area(研究主題)
 
+> 研究主題>>研究子領域>>論文題目
+
 - EconLit
 
 - The Social Sciences Citation Index(SSCI)
 
-- Google scholar(set the ranking and the publication year as your clue)
+- Google scholar(set the ranking（引用次數） and the publication year as your clue)
 
 
 #### On the dataset
 
-1. Always do the data exploring(be specific, inspecting, cleaning, and summarizing) at first, and decide how to handle the missing value.
+1. Always do the data exploring (be specific, inspecting, cleaning, and summarizing) at first, and decide how to handle the missing value.
 
 > Usually, we set any numerical codes(or character) for missing value.
     
