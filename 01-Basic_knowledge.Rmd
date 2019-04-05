@@ -1,3 +1,53 @@
 # Basic_knowledge{#intro}
 
+## How to write a empirical paper
+
+Basically, there are seven parts in an empirical paper. Let's see the ordered list below:
+
+1. Abstract
+2. Introduction
+3. Conceptual (or Theoretical) Framework
+4. Econometric Models and Estimation Methods
+5. The Data 
+6. Results(& Robustness check)
+7. Conclusions
+
+### Abstract
+
+The capstone of your paper! Take care of it like your first and only baby because it really dominates if the reader will go into the rest content.
+
+### Introduction
+
+there are a few things that should appear in the introduction.
+
+- States the basic objective and justify why that is important.
+
+- Entails a literature review in usual, which indicates what has been done and how previous can be upon. But, be humble and polite in order not to hurt someone else.
+
+- Most Researcher will summarize what is discovered in this paper. This can be a useful way to grab the audience's attention.
+
+
+### Conceptual or Theoretical Framework
+
+1. Often, there is no need to write down an economic model or empirical model unless you build a new one.
+
+2. We may spend the effort on specify the intuition and factors(or variables) that need to be controled in the model. It will bring me extra benefit on the models section explanation because the reader may already know the variables you use.
+
+### Econometric Models and Estimation Methods
+
+1. Describe the general approach you used to answering the question.
+
+2. Writing the equations with error term will be helpful to discuss further on whether the assumption is satisified or not.
+
+3. Specifying the model clearly, and then discuss the estimation methods.
+
+> It sounds like the relationship between causality equation and real model equation.
+
+> Any assumption in the estimation method should be justified. For example, there are three assumption in IV, including the weak IV test. Don't tell the audience you want to do with IV, and jump to the causality interpretation in a blink! You even yet explain it is suitable or not.....
+
+4. Show the model(equation) in LaTeX, including the key explanatory variable(解釋變數) and controlled variable(控制變數)
+
+### The Data 
+
+> Honestly, I am not sure if the Data section should be mentioned before entering the model or not?
 
