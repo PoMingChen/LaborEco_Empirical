@@ -1,0 +1,47 @@
+---
+title: "Python in RStudio"
+author: "PoMingChen"
+date: "4/13/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### setting the conda env
+```{r}
+# library(reticulate)
+```
+
+
+```{r}
+conda_create("m-team-machine-learning")
+```
+
+```{r}
+library(reticulate)
+use_python("/Users/chenpoming/anaconda3/envs/m-team-machine-learning/bin/python", required = T)
+use_condaenv("m-team-machine-learning")
+```
+
+### some installation
+
+```{r}
+conda_install(envname = "m-team-machine-learning",
+              c("numpy","pandas"))
+```
+
+```{r}
+conda_install(envname = "m-team-machine-learning",
+              "keras")
+```
+
+```{r}
+conda_install(envname="m-team-machine-learning",
+              c("google-api-python-client",
+                "google-auth-httplib2",
+                "google-auth-oauthlib"),
+              pip=TRUE)
+```
+
