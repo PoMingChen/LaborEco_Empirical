@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 3 Causality and Selection Bias | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 3 Causality and Selection Bias | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Causality and Selection Bias | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie">
+
+
+<meta name="date" content="2019-04-19">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="intro.html">
+<link rel="next" href="regression.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Basic_knowledge</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#how-to-write-a-empirical-paper"><i class="fa fa-check"></i><b>2.1</b> How to write a empirical paper</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#abstract"><i class="fa fa-check"></i><b>2.1.1</b> Abstract</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#introduction"><i class="fa fa-check"></i><b>2.1.2</b> Introduction</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#conceptual-or-theoretical-framework"><i class="fa fa-check"></i><b>2.1.3</b> Conceptual or Theoretical Framework</a></li>
+<li class="chapter" data-level="2.1.4" data-path="intro.html"><a href="intro.html#econometric-models-and-estimation-methods"><i class="fa fa-check"></i><b>2.1.4</b> Econometric Models and Estimation Methods</a></li>
+<li class="chapter" data-level="2.1.5" data-path="intro.html"><a href="intro.html#the-data"><i class="fa fa-check"></i><b>2.1.5</b> The Data</a></li>
+<li class="chapter" data-level="2.1.6" data-path="intro.html"><a href="intro.html#results-robustness-check"><i class="fa fa-check"></i><b>2.1.6</b> Results(&amp; Robustness check)</a></li>
+<li class="chapter" data-level="2.1.7" data-path="intro.html"><a href="intro.html#conclusions"><i class="fa fa-check"></i><b>2.1.7</b> Conclusions</a></li>
+<li class="chapter" data-level="2.1.8" data-path="intro.html"><a href="intro.html#one-more-thing"><i class="fa fa-check"></i><b>2.1.8</b> One more thing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="causality-and-selection-bias.html"><a href="causality-and-selection-bias.html"><i class="fa fa-check"></i><b>3</b> Causality and Selection Bias</a><ul>
+<li class="chapter" data-level="3.0.1" data-path="causality-and-selection-bias.html"><a href="causality-and-selection-bias.html#the-causal-if-then-question"><i class="fa fa-check"></i><b>3.0.1</b> The causal if-then question</a></li>
+<li class="chapter" data-level="3.0.2" data-path="causality-and-selection-bias.html"><a href="causality-and-selection-bias.html#potential-outcome-framework"><i class="fa fa-check"></i><b>3.0.2</b> Potential Outcome Framework</a></li>
+<li class="chapter" data-level="3.0.3" data-path="causality-and-selection-bias.html"><a href="causality-and-selection-bias.html#section-3.0.3"><i class="fa fa-check"></i><b>3.0.3</b> 小結論</a></li>
+<li class="chapter" data-level="3.0.4" data-path="causality-and-selection-bias.html"><a href="causality-and-selection-bias.html#estimation-of-causal-effects"><i class="fa fa-check"></i><b>3.0.4</b> Estimation of Causal Effects</a></li>
+<li class="chapter" data-level="3.0.5" data-path="causality-and-selection-bias.html"><a href="causality-and-selection-bias.html#numerical-example"><i class="fa fa-check"></i><b>3.0.5</b> Numerical Example</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>4</b> Regression</a></li>
+<li class="chapter" data-level="5" data-path="iv.html"><a href="iv.html"><i class="fa fa-check"></i><b>5</b> IV</a></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="causality-and-selection-bias" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Causality and Selection Bias</h1>
+<div id="the-causal-if-then-question" class="section level3">
+<h3><span class="header-section-number">3.0.1</span> The causal if-then question</h3>
+<p>在實證研究要回答一個因果關係是不容易的一件事，縱使是一個直覺上非常簡單的若不小心也會產生誤導的結果。只能說，想要捕捉真實世界的樣貌並不是件容易的事，所以我們需要學習各種計量方法。</p>
+<p>來看一個簡單的例子。</p>
+<p>Do hospital make people healthier?</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Group</th>
+<th align="right">Sample size</th>
+<th align="right">Mean Health Status</th>
+<th align="right">sd.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Hospital</td>
+<td align="right">7774</td>
+<td align="right">3.21</td>
+<td align="right">0.014</td>
+</tr>
+<tr class="even">
+<td align="right">No Hospital</td>
+<td align="right">90.049</td>
+<td align="right">3.93</td>
+<td align="right">0.003</td>
+</tr>
+</tbody>
+</table>
+<p>怎麼看起來有去醫院看醫生的人，健康狀況反而不如沒有去看醫生的人呢？難道醫療的效果是負的嗎？</p>
+<p>其實，不能夠忽略會去醫院的人，本身的健康狀況肯定是比較差的。若我們沒有先控制住 <strong>有去醫院的那群人</strong>，以及 <strong>沒有去醫院的那群人</strong>，本質上的不同的話，我們就可能會做出令人匪夷所思的判斷…</p>
+<p>所以我們不應該由敘述統計量的帳面數字，就將其詮釋為因果關係的大小、方向等等。</p>
+</div>
+<div id="potential-outcome-framework" class="section level3">
+<h3><span class="header-section-number">3.0.2</span> Potential Outcome Framework</h3>
+<p>自1990年代開始，計量經濟學對因果關係的探究，有受到醫學實驗領域的影響，總希望能夠在現實生活中製造出一個很像實驗室真空的環境來捕捉因果關係（這也是實驗經濟學最主要的核心精神，背後比較廣泛的概念稱為Randomized Controlled Trial, RCT）。</p>
+<p>受限於RCT的成本較高，有些可能涉及研究倫理道德議題，因此若是要用資料(Data)來下手的話，也是會想要設計成彷彿大自然冥冥之中安排好的經歷一樣，我們稱做Natural Experiment。</p>
+<p>所有的實驗都有實驗組（treatment group），以及對照組（controlled group）。而實驗前本身就會想要設定兩組樣本的特性是一樣的，也就是俗稱的立足點相同。</p>
+<p>但是在Natural Experiment裡面，舉例來說 <strong>上大學對薪資的影響</strong>，同一個樣本，我永遠只能知道有上大學後現在的他，但是我就是看不到 <strong>如果</strong> 沒有上大學的他，表現又是如何。</p>
+<p><strong>可觀察到的結果永遠只有一個</strong></p>
+<p>以數學表示：</p>
+<div id="potential-outcome" class="section level4">
+<h4><span class="header-section-number">3.0.2.1</span> Potential Outcome</h4>
+<p><span class="math display">\[
+Potnetial\ outcome =
+\begin{cases}
+Y_{1i} &amp; if &amp; D_i=1\\
+Y_{0i} &amp; if &amp; D_i=0\\
+\end{cases}
+\]</span>
+<span class="math inline">\(D_i = 1\)</span> 表示有接受Treatment.</p>
+</div>
+<div id="observed-outcome" class="section level4">
+<h4><span class="header-section-number">3.0.2.2</span> Observed Outcome</h4>
+<p>i = 1則＝<span class="math inline">\(Y_{1i}\)</span>。反之，i = 0則＝<span class="math inline">\(Y_{0i}\)</span>。只有一種結果。</p>
+<p><span class="math display">\[
+Observed\ outcome =
+Y_i = Y_{1i}D_i + Y_{0i}(1-D_i)
+\]</span>
+#### Counterfactual outcome</p>
+<p>對於有接受treatment，像是有上大學的小明，沒有上大學的他，是無法觀察到的，我們就稱 <strong>沒有上大學的他</strong> 為Counterfactual outcome。</p>
+</div>
+</div>
+<div id="section-3.0.3" class="section level3">
+<h3><span class="header-section-number">3.0.3</span> 小結論</h3>
+<p>由observed outcome簡單化減：<span class="math inline">\(Y_i = Y_{0i}+(\underset{causal\ effect}{\underbrace{Y_{1i}-Y_{0i}}})D_i\)</span></p>
+<p>綜合以上，因為potential outcome，我們就是無法兩個都看到。因此在可視得結果(observed outcome)下，學習進階的計量技巧，拆解出我們要的因果關係部分。</p>
+</div>
+<div id="estimation-of-causal-effects" class="section level3">
+<h3><span class="header-section-number">3.0.4</span> Estimation of Causal Effects</h3>
+<p>因為我們不可能只在意一個人接受treatment後的改善程度，我們會想要去一般化我們的估計結果，所以自然是詮釋為 <strong>average causal effect</strong>。因此就會有 _Expectation_的期望值概念。</p>
+<div id="information-dismantling" class="section level4">
+<h4><span class="header-section-number">3.0.4.1</span> Information dismantling</h4>
+<blockquote>
+<p>現在我們要進行訊息拆解。</p>
+</blockquote>
+<p><span class="math display">\[
+\underset{Observed\ diff.\ in\ average\ outcome}{\underbrace{\mathbb{E}(Y_i|D_i=1)-\mathbb{E}(Y_i|D_i = 0)}} = \\
+\underset{average\ treatment\ effect\ on\ treatment}{\underbrace{\mathbb{E}(Y_{1i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 1)}}\ + 
+\underset{selection\ bias}{\underbrace{\mathbb{E}(Y_{0i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 0)}}\ 
+\]</span></p>
+</div>
+<div id="att" class="section level4">
+<h4><span class="header-section-number">3.0.4.2</span> ATT</h4>
+<blockquote>
+<p>The Average Treatment effect on the Treatment</p>
+</blockquote>
+</div>
+<div id="selection-bias" class="section level4">
+<h4><span class="header-section-number">3.0.4.3</span> Selection Bias</h4>
+</div>
+<div id="cate" class="section level4">
+<h4><span class="header-section-number">3.0.4.4</span> CATE</h4>
+</div>
+<div id="ate" class="section level4">
+<h4><span class="header-section-number">3.0.4.5</span> ATE</h4>
+<blockquote>
+<p>說明一下ATE，比ATT夠更難求到。基於定義就可以知道。他的樣本群要求更大。</p>
+</blockquote>
+</div>
+</div>
+<div id="numerical-example" class="section level3">
+<h3><span class="header-section-number">3.0.5</span> Numerical Example</h3>
+<div id="real-situation" class="section level4">
+<h4><span class="header-section-number">3.0.5.1</span> Real situation</h4>
+</div>
+<div id="assume-the-counterfactual-outcomes-are-observable" class="section level4">
+<h4><span class="header-section-number">3.0.5.2</span> Assume the counterfactual outcomes are observable</h4>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["LaborEco_Empirical.pdf", "LaborEco_Empirical.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
