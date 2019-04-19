@@ -71,9 +71,12 @@ $$
 > 現在我們要進行訊息拆解。
 
 $$
-\underset{Observed\ diff.\ in\ average\ outcome}{\underbrace{\mathbb{E}(Y_i|D_i=1)-\mathbb{E}(Y_i|D_i = 0)}} = \\
-\underset{average\ treatment\ effect\ on\ treatment}{\underbrace{\mathbb{E}(Y_{1i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 1)}}\ + 
-\underset{selection\ bias}{\underbrace{\mathbb{E}(Y_{0i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 0)}}\ 
+\underset{Observed\ diff.\ in\ average\ outcome}
+{\underbrace{\mathbb{E}(Y_i|D_i=1)-\mathbb{E}(Y_i|D_i = 0)}} = \\
+\underset{average\ treatment\ effect\ on\ treatment}
+{\underbrace{\mathbb{E}(Y_{1i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 1)}}\ + 
+\underset{selection\ bias}
+{\underbrace{\mathbb{E}(Y_{0i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 0)}}\ 
 $$
 
 #### ATT 
