@@ -1,8 +1,8 @@
 # Causality and Selection Bias
 
-###  The causal if-then question
+###  The causal if-then question {-}
 
-在實證研究要回答一個因果關係是不容易的一件事，縱使是一個直覺上非常簡單的若不小心也會產生誤導的結果。只能說，想要捕捉真實世界的樣貌並不是件容易的事，所以我們需要學習各種計量方法。
+在實證研究要回答一個因果關係是不容易的一件事，縱使是一個直覺上非常簡單的問句，若不小心也會產生誤導的結果。只能說，想要捕捉真實世界的樣貌並不是件容易的事，所以我們需要學習各種計量方法。
 
 來看一個簡單的例子。
 
@@ -11,31 +11,31 @@ Do hospital make people healthier?
 |       Group | Sample size | Mean Health Status |   sd. |
 | ----------: | ----------: | -----------------: | ----: |
 |    Hospital |        7774 |               3.21 | 0.014 |
-| No Hospital |      90.049 |               3.93 | 0.003 |
+| No Hospital |      90049 |               3.93 | 0.003 |
 
 怎麼看起來有去醫院看醫生的人，健康狀況反而不如沒有去看醫生的人呢？難道醫療的效果是負的嗎？
 
-其實，不能夠忽略會去醫院的人，本身的健康狀況肯定是比較差的。若我們沒有先控制住 __有去醫院的那群人__，以及 __沒有去醫院的那群人__，本質上的不同的話，我們就可能會做出令人匪夷所思的判斷...
+其實不然，因為不能夠忽略會去醫院的人，本身的健康狀況肯定是比較差的。若我們沒有先控制住 __有去醫院的那群人__，以及 __沒有去醫院的那群人__，兩群人本質上的不同的話，我們就可能會做出令人匪夷所思的判斷...
 
 所以我們不應該由敘述統計量的帳面數字，就將其詮釋為因果關係的大小、方向等等。
 
-### Potential Outcome Framework
+### Potential Outcome Framework{-}
 
 自1990年代開始，計量經濟學對因果關係的探究，有受到醫學實驗領域的影響，總希望能夠在現實生活中製造出一個很像實驗室真空的環境來捕捉因果關係（這也是實驗經濟學最主要的核心精神，背後比較廣泛的概念稱為Randomized Controlled Trial, RCT）。
 
 受限於RCT的成本較高，有些可能涉及研究倫理道德議題，因此若是要用資料(Data)來下手的話，也是會想要設計成彷彿大自然冥冥之中安排好的經歷一樣，我們稱做Natural Experiment。
 
-所有的實驗都有實驗組（treatment group），以及對照組（controlled group）。而實驗前本身就會想要設定兩組樣本的特性是一樣的，也就是俗稱的立足點相同。
+所有的實驗都有實驗組（treatment group），以及對照組（controlled group）。而實驗前本身就會想要控制到兩組樣本的特徵、特質都固定，也就是俗稱的立足點相同。
 
-但是在Natural Experiment裡面，舉例來說 __上大學對薪資的影響__，同一個樣本，我永遠只能知道有上大學後現在的他，但是我就是看不到 __如果__ 沒有上大學的他，表現又是如何。
+但是在Natural Experiment裡面，舉例來說： __上大學對薪資的影響__，同一個人，我永遠只能知道有上大學後現在的他，但是我就是看不到 __如果__ 沒有上大學的他，表現又是如何。
 
 __可觀察到的結果永遠只有一個__
 
 以數學表示：
 
-#### Potential Outcome
+#### Potential Outcome{-}
 $$
-Potnetial\ outcome =
+Potential\ outcome =
 \begin{cases}
 Y_{1i} & if & D_i=1\\
 Y_{0i} & if & D_i=0\\
@@ -43,30 +43,34 @@ Y_{0i} & if & D_i=0\\
 $$
 $D_i = 1$ 表示有接受Treatment.
 
-#### Observed Outcome
 
-i = 1則＝$Y_{1i}$。反之，i = 0則＝$Y_{0i}$。只有一種結果。
+#### Observed Outcome{-}
+
+i = 1則＝$Y_{1i}$。
+反之，i = 0則＝$Y_{0i}$。
+總是只有一種結果。
 
 $$
 Observed\ outcome =
 Y_i = Y_{1i}D_i + Y_{0i}(1-D_i)
 $$
-#### Counterfactual outcome
+
+#### Counterfactual outcome{-}
 
 對於有接受treatment，像是有上大學的小明，沒有上大學的他，是無法觀察到的，我們就稱 __沒有上大學的他__ 為Counterfactual outcome。
 
-### 小結論
+#### 小結論{-}
 
-由observed outcome簡單化減：$Y_i = Y_{0i}+(\underset{causal\ effect}{\underbrace{Y_{1i}-Y_{0i}}})D_i$
+由Observed Outcome簡單化減：$Y_i = Y_{0i}+(\underset{causal\ effect}{\underbrace{Y_{1i}-Y_{0i}}})D_i$
 
 綜合以上，因為potential outcome，我們就是無法兩個都看到。因此在可視得結果(observed outcome)下，學習進階的計量技巧，拆解出我們要的因果關係部分。
 
 
-### Estimation of Causal Effects
+### Estimation of Causal Effects{-}
 
-因為我們不可能只在意一個人接受treatment後的改善程度，我們會想要去一般化我們的估計結果，所以自然是詮釋為 __average causal effect__。因此就會有 _Expectation_的期望值概念。
+因為我們不可能只在意一個人接受treatment後的改善程度，我們會想要去一般化我們的估計結果，所以自然是詮釋為 __average causal effect__。因此就會有 _Expectation_ 的期望值概念。
 
-#### Information dismantling
+#### Information dismantling{-}
 
 > 現在我們要進行訊息拆解。
 
@@ -79,27 +83,145 @@ $$
 {\underbrace{\mathbb{E}(Y_{0i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 0)}}\ 
 $$
 
-#### ATT 
+#### ATT{-}
 
 > The Average Treatment effect on the Treatment
 
+$$
+\underset{average\ treatment\ effect\ on\ treatment}
+{\underbrace{\mathbb{E}(Y_{1i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 1)}}\ = 
+\mathbb{E}(Y_{1i}-Y_{0i}|D_i = 1) = \frac{1}{N_1}\sum_{D_i=1}^{N_1}[Y_{1i}-Y_{0i}]
+$$
 
-#### Selection Bias
+舉例一下，假設小明是有上大學的年輕人，所以他有吃上大學這帖藥。ATT就是比較現在的他，和那個 __如果沒有上大學的小明__，兩人的薪資落差。
+
+#### Selection Bias{-}
+
+$$
+\underset{selection\ bias}
+{\underbrace{\mathbb{E}(Y_{0i}|D_i=1)-\mathbb{E}(Y_{0i}|D_i = 0)}}\ 
+$$
+
+對於Selection bias的理解，$\mathbb{E}(Y_{0i}|D_i=1)$， __這是有上大學的那群人， 如果他沒有去上大學的話，他的平均薪資__，再去減掉那群沒有上大學的人，他們目前的平均薪資。
+
+#### ATE{-}
+
+> Average Treatment Effect(ATE)
+
+要推得這個值，挑戰比得到ATT來得高。理由是因為他要的是整個population。但是ATT只要$D_i=1$
+的sub-group即可。有時候計量推估，若能得到ATT的話，就已經是萬幸了XD
+
+之後會推導ATT、ATE、Selection bias的關係。當Selection Bias=0，則ATT = ATE，也因此你可以用effect on the treatment group，推估到整個有參與的樣本全部(treatment group + controlled group)。
 
 
-#### CATE
-
-#### ATE
-
-> 說明一下ATE，比ATT夠更難求到。基於定義就可以知道。他的樣本群要求更大。
 
 
+$$
+\mathbb{E}(Y_{1i}-Y_{0i}) = \frac{1}{N}\sum_{i=1}^{N}[Y_{1i}-Y_{0i}]
+$$
 
-### Numerical Example
+對比到ATT的式子。
 
-#### Real situation 
+$$
+\mathbb{E}(Y_{1i}-Y_{0i}|D_i = 1) = \frac{1}{N_1}\sum_{D_i=1}^{N_1}[Y_{1i}-Y_{0i}]
+$$
 
-#### Assume the counterfactual outcomes are observable
+#### CATE{-}
+
+> Conditional of Average Treatment Effect(CATE)
+
+$$
+\mathbb{E}(Y_{1i}-Y_{0i}|X_i = x) = \frac{1}{N_x}\sum_{x_i=1}^{N_x}[Y_{1i}-Y_{0i}]
+$$
+這就是某個母體子群（sub-population）的ATE。
+
+舉例來說，對女孩子而言，上大學對其薪資的影響？
+
+令$X_i = 1$，那CATE就是 __對女性而言__，上大學對其薪資的影響。
+
+
+### Numerical Example{-}
+
+我們來實際看一個例子，值得注意的是ATT、ATE、CATE，這些公式都是針對母體（the whole population）（the $N$)，但是實際上你只有樣本平均(the $n$)。
+
+這邊舉的小例子，假設就是只有5個人的population。
+
+#### Real situation{-}
+
+|  $i$ | $Y_{i1}$ | $Y_{01}$ | $Y_{i}$ | $D_{1}$ | $Y_{i1}-Y_{01}$ |
+| ---: | -------: | -------: | ------: | ------: | --------------: |
+| Gary |        3 |        ? |       3 |       1 |               ? |
+| Lisa |        2 |        ? |       2 |       1 |               ? |
+| Jeff |        ? |        1 |       1 |       0 |               ? |
+| Mary |        ? |        1 |       1 |       0 |               ? |
+
+the $\mathbb{E}(Y_i|D_i = 1)$ = 2.5
+
+the $\mathbb{E}(Y_i|D_i = 0)$ = 1
+
+the observed difference in average outcome = 1.5
+
+#### Assume the counterfactual outcomes are observable{-}
+
+|  $i$ | $Y_{i1}$ | $Y_{01}$ | $Y_{i}$ | $D_{1}$ | $Y_{i1}-Y_{01}$ |
+| ---: | -------: | -------: | ------: | ------: | --------------: |
+| Gary |        3 |        2 |       3 |       1 |               1 |
+| Lisa |        2 |        1 |       2 |       1 |               1 |
+| Jeff |        1 |        1 |       1 |       0 |               0 |
+| Mary |        1 |        1 |       1 |       0 |               0 |
+
+#### The Effect{-}
+
+##### The ATE{-}
+
+|                         $i$ | $Y_{i1}$ | $Y_{01}$ | $Y_{i}$ | $D_{1}$ | $Y_{i1}-Y_{01}$ |
+| --------------------------: | -------: | -------: | ------: | ------: | --------------: |
+|                        Gary |        3 |        2 |       3 |       1 |               1 |
+|                        Lisa |        2 |        1 |       2 |       1 |               1 |
+|                        Jeff |        1 |        1 |       1 |       0 |               0 |
+|                        Mary |        1 |        1 |       1 |       0 |               0 |
+|        $\mathbb{E}(Y_{1i})$ |     1.75 |          |         |         |                 |
+|        $\mathbb{E}(Y_{0i})$ |          |     1.25 |         |         |                 |
+| $\mathbb{E}(Y_{1i}-Y_{0i})$ |          |          |         |         |             0.5 |
+
+0.5 = 1.75-1.25 = (1+1+0+0)/4
+
+##### The ATT{-}
+
+|                         $i$ | $Y_{i1}$ | $Y_{01}$ | $Y_{i}$ | $D_{1}$ | $Y_{i1}-Y_{01}$ |
+| --------------------------: | -------: | -------: | ------: | ------: | --------------: |
+|                        Gary |        3 |        2 |       3 |       1 |               1 |
+|                        Lisa |        2 |        1 |       2 |       1 |               1 |
+|                        Jeff |        1 |        1 |       1 |       0 |               0 |
+|                        Mary |        1 |        1 |       1 |       0 |               0 |
+|        $\mathbb{E}(Y_{1i}|D_i = 1)$ |     2.5|          |         |         |                 |
+|        $\mathbb{E}(Y_{0i}|D_i = 1)$ |          |     1.5 |         |         |                 |
+| $\mathbb{E}(Y_{1i}-Y_{0i}|D_i = 1)$ |          |          |         |         |             1 |
+
+1 = 2.5-1.5 = (1+1)/2
+
+##### The selection bias{-}
+
+the observed difference in average outcome = 1.5
+
+the ATT = 1
+
+the Selection Bias = 0.5
+
+### Identification Strategy{-}
+
+What's your identification strategy? Your boss just asked...
+
+It means __what are the assumptions__ that allow you to claim you have uncovered a casual effect?
+
+Remember, the identification depends on __assumptions__, not on estimation strategies.
+
+Well designed identification strategies can eliminate selection bias, and allow us to learn about the causal effect of a treatment on outcomes of interest.
+
+The causality never comes out like a magic whenever you __just claim__ to use certain estimation strategies.
+
+You always have to check if the assumptions before the identification is satisified or not.
+
 
 
 
