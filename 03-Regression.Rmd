@@ -1,3 +1,25 @@
 # Regression
 
-We describe our methods in this chapter.
+### Randomly Assigned Treatment Can Eliminate Selection Bias {-}
+
+### Observational Studies {-}
+
+### Main Concept of Regression {-}
+
+### Conditional Independence Assumption(CIA) {-}
+
+### Potential Outcomes and Regression {-}
+
+### Identification {-}
+
+#### Digression: The Law of Iterated Expectations (LIE) {-}
+
+### Estimation and Inferece in Regression {-}
+
+#### Digression: Omiited Variable Bias {-}
+
+### Selection Bias and Bad Controls {-}
+
+#### Selection Bias and Bad Controls-- adding occupation? {-}
+
+#### Selection Bias and Bad Controls-- proxy control {-}
