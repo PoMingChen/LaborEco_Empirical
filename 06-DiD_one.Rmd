@@ -1,0 +1,15 @@
+# DiD one
+
+### Main Idea of DiD {-}
+
+### An Example of DiD {-}
+
+> the NJ PA fast food case
+
+### Two Views on DiD {-}
+
+### Potential Outcomes and DiD {-}
+
+### Identification Assumptions for DiD {-}
+
+

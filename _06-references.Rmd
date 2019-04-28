@@ -1,4 +1,6 @@
-# IV
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
 
 resource:
 
@@ -7,3 +9,4 @@ resource:
 2. [econometric_analysis from NTPUEcon graduate school by Dr.Mau-Ting  Lin](https://bookdown.org/tpemartin/econometric_analysis/)
 
 3. [PoE with R ch10](https://bookdown.org/ccolonescu/RPoE4/random-regressors.html)
+
