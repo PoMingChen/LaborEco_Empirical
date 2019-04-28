@@ -1,3 +1,35 @@
-# Final Words
+# DiD two
 
-We have finished a nice book.
+### Review: Minimum wage laws and emplyment example {-}
+
+### Review: DiD setup {-}
+
+### Review: DiD identification {-}
+
+### DiD Estimation {-}
+
+#### DiD Estimation Basic Two Periods/Groups {-}
+
+#### DiD Estimation Multiple Periods/Groups {-}
+
+### Robustness Check--Test common trend assumption {-}
+
+### Statistical Inference in DiD Estimation {-}
+
+### DDIV {-}
+
+> Duflo(2001)
+
+#### Main idea of Duflo
+
+#### The program
+
+#### The Data
+
+#### Identification Strategy
+
+#### The program effect on schooling
+
+#### The program effect on earnings
+
+#### The Wald estimate of return to education
