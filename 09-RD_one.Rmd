@@ -1,3 +1,17 @@
-# Final Words
+# RD one
 
-We have finished a nice book.
+### Main Idea of Regression Discontinuity(RD)
+
+### Main Idea of Regression Discontinuity(RD) -an example
+
+### Sharp RDD and Fuzzy RDD
+
+### Sharp RDD: Basic setup
+
+### Sharp RDD: A Hypothetical Example- effect of scholarship
+
+### Probability of treatment in Sharp RDD
+
+### Sharp RDD: Identification of the Threshold Causal Effect
+
+### Sharp RDD: Threat to Validity
