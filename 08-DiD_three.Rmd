@@ -1,3 +1,9 @@
-# Final Words
+# DiD three
 
-We have finished a nice book.
+### Review Duflo(2001) - Identification Strategy (Table3)
+
+### Duflo(2001) - Program Effect on Education:Results from Regression Analysis
+
+### Duflo(2001) - Program Effect on Wage
+
+### Duflo(2001) - Estimating the returns to education
